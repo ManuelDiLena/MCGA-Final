@@ -24,6 +24,10 @@ const ArticuloSchema = new Schema(
             required: true
         }
 
+    },
+    {
+        versionKey: false,
+        timestamps: true
     }
 );
 

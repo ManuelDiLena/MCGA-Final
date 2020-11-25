@@ -36,5 +36,11 @@ const UsersSchema = new Schema(
             maxlength: 16
         }
 
+    },
+    {
+        versionKey: false, //Lo que hace  que cuando actualizas un dato en update, cambia los valores pero no te lo
+        timestamps: true // agrega con un nuevo ID, sino que lo mantiene en el mismo ID, si esta habilitado
+                         // es posibles que en vez que sea ID: 1 donde hiciste los cambio, te cree un nuevo ID con los cambios que hiciste al ID 1
+                    
     }
 )
