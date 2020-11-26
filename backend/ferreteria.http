@@ -1,0 +1,37 @@
+@api = http://localhost:3000
+
+###
+
+GET {{api}}/articulo
+
+###
+
+POST {{api}}/articulo
+Content-Type: application/json
+
+{
+    "item_name": "Tornillos",
+    "description": "1/2 pulgada",
+    "cost": 40.90,
+    "quantity": 130
+}
+
+###
+
+POST {{api}}/users
+Content-Type: application/json
+
+{
+    "UserName": "davids",
+    "Name": "Curras David",
+    "Email": "madnuel.di4lenssa.29@gmail.com",
+    "Address": "cassdsaa2d 1232",
+    "Password": "02584"
+}
+###
+
+DELETE {{api}}/Users/1
+
+###
+
+GET {{api}}/Users

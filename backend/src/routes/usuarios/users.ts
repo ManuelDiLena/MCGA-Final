@@ -4,7 +4,6 @@ const UsersSchema = new Schema(
     {
         UserName:{
             type: String,
-            unique: true,
             required: true,
             minlength: 4
         },
@@ -14,8 +13,7 @@ const UsersSchema = new Schema(
         },
         Email:{
             type: String,
-            required: true,
-            match: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+            required: true
         },
         Address: {
             type: String,
@@ -25,14 +23,13 @@ const UsersSchema = new Schema(
         Phone: {
             type: Number,
             required: true,
-            min: 7,
-            max:13
+            minlength: 7,
+            maxlength:13
         },
-        password:{
+        Password:{
             type: String,
             required: true,
-            match: /(?=.*[a-zA-Z])(?=.*[0-9]+).*/,
-            minlength: 8,
+            minlength: 4,
             maxlength: 16
         }
 
@@ -44,3 +41,4 @@ const UsersSchema = new Schema(
                     
     }
 )
+export default model("Usuario", UsersSchema);
